@@ -1,4 +1,4 @@
-import type { CodegenCtx, OpcodeHandler } from './codegen'
+import type { OpcodeHandler } from './codegen'
 
 function createAddOrAnd(opcode: string): OpcodeHandler {
   return function (ctx) {
