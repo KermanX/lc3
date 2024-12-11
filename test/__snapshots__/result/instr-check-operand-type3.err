@@ -1,0 +1,1 @@
+error: operand 3 of instruction `AND R1, R2, "abc"` should be of type `Immediate`, but got `StringLiteral`

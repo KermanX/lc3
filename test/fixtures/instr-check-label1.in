@@ -1,0 +1,2 @@
+; We cannot attach label to `.ORIG`.
+LOOP    .ORIG   x3000

@@ -1,0 +1,24 @@
+[
+  {
+    "source": "; `ADD` will be treated as an operand of the `.ORIG` instruction.",
+    "labels": [],
+    "instruction": [],
+    "comment": " `ADD` will be treated as an operand of the `.ORIG` instruction."
+  },
+  {
+    "source": ".ORIG   x3000, ADD",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000",
+      "ADD"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

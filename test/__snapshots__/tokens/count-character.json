@@ -1,0 +1,386 @@
+[
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; Program to count occurrences of a character in a file.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Program to count occurrences of a character in a file."
+  },
+  {
+    "source": "; Character to be input from the keyboard.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Character to be input from the keyboard."
+  },
+  {
+    "source": "; Result to be displayed on the monitor.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Result to be displayed on the monitor."
+  },
+  {
+    "source": "; Program works only if no more than 9 occurrences are found.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Program works only if no more than 9 occurrences are found."
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; Initialization",
+    "labels": [],
+    "instruction": [],
+    "comment": " Initialization"
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "        .ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        AND     R2, R2, #0      ; R2 is counter, initialize to 0",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R2",
+      "R2",
+      "#0"
+    ],
+    "comment": " R2 is counter, initialize to 0"
+  },
+  {
+    "source": "        LD      R3, PTR         ; R3 is pointer to characters",
+    "labels": [],
+    "instruction": [
+      "LD",
+      "R3",
+      "PTR"
+    ],
+    "comment": " R3 is pointer to characters"
+  },
+  {
+    "source": "        TRAP    x23             ; R0 gets character input",
+    "labels": [],
+    "instruction": [
+      "TRAP",
+      "x23"
+    ],
+    "comment": " R0 gets character input"
+  },
+  {
+    "source": "        LDR     R1, R3, #0      ; R1 gets the next character",
+    "labels": [],
+    "instruction": [
+      "LDR",
+      "R1",
+      "R3",
+      "#0"
+    ],
+    "comment": " R1 gets the next character"
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; Test character for end of file",
+    "labels": [],
+    "instruction": [],
+    "comment": " Test character for end of file"
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "TEST    ADD     R4, R1, #-4     ; Test for EOT",
+    "labels": [
+      "TEST"
+    ],
+    "instruction": [
+      "ADD",
+      "R4",
+      "R1",
+      "#-4"
+    ],
+    "comment": " Test for EOT"
+  },
+  {
+    "source": "        BRz     OUTPUT          ; If done, prepare the output",
+    "labels": [],
+    "instruction": [
+      "BRz",
+      "OUTPUT"
+    ],
+    "comment": " If done, prepare the output"
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; Test character for match. If a match, increment count.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Test character for match. If a match, increment count."
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "        NOT     R1, R1",
+    "labels": [],
+    "instruction": [
+      "NOT",
+      "R1",
+      "R1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        ADD     R1, R1, #1      ; R1 <-- -R1",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R1",
+      "R1",
+      "#1"
+    ],
+    "comment": " R1 <-- -R1"
+  },
+  {
+    "source": "        ADD     R1, R1, R0      ; R1 <-- R0-R1. If R1=0, a match!",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R1",
+      "R1",
+      "R0"
+    ],
+    "comment": " R1 <-- R0-R1. If R1=0, a match!"
+  },
+  {
+    "source": "        BRnp    GETCHAR         ; If no match, do not increment",
+    "labels": [],
+    "instruction": [
+      "BRnp",
+      "GETCHAR"
+    ],
+    "comment": " If no match, do not increment"
+  },
+  {
+    "source": "        ADD     R2, R2, #1",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R2",
+      "R2",
+      "#1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; Get next character from the file",
+    "labels": [],
+    "instruction": [],
+    "comment": " Get next character from the file"
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "GETCHAR ADD     R3, R3, #1      ; Increment the pointer",
+    "labels": [
+      "GETCHAR"
+    ],
+    "instruction": [
+      "ADD",
+      "R3",
+      "R3",
+      "#1"
+    ],
+    "comment": " Increment the pointer"
+  },
+  {
+    "source": "        LDR     R1, R3, #0      ; R1 gets the next character to test",
+    "labels": [],
+    "instruction": [
+      "LDR",
+      "R1",
+      "R3",
+      "#0"
+    ],
+    "comment": " R1 gets the next character to test"
+  },
+  {
+    "source": "        BRnzp   TEST",
+    "labels": [],
+    "instruction": [
+      "BRnzp",
+      "TEST"
+    ],
+    "comment": ""
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; Output the count.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Output the count."
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "OUTPUT  LD      R0, ASCII       ; Load the ASCII template",
+    "labels": [
+      "OUTPUT"
+    ],
+    "instruction": [
+      "LD",
+      "R0",
+      "ASCII"
+    ],
+    "comment": " Load the ASCII template"
+  },
+  {
+    "source": "        ADD     R0, R0, R2      ; Convert binary to ASCII",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R0",
+      "R0",
+      "R2"
+    ],
+    "comment": " Convert binary to ASCII"
+  },
+  {
+    "source": "        TRAP    x21             ; ASCII code in R0 is displayed",
+    "labels": [],
+    "instruction": [
+      "TRAP",
+      "x21"
+    ],
+    "comment": " ASCII code in R0 is displayed"
+  },
+  {
+    "source": "        TRAP    x25             ; Halt machine",
+    "labels": [],
+    "instruction": [
+      "TRAP",
+      "x25"
+    ],
+    "comment": " Halt machine"
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; Storage for pointer and ASCII template",
+    "labels": [],
+    "instruction": [],
+    "comment": " Storage for pointer and ASCII template"
+  },
+  {
+    "source": ";",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "ASCII   .FILL   x0030",
+    "labels": [
+      "ASCII"
+    ],
+    "instruction": [
+      ".FILL",
+      "x0030"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "PTR     .FILL   x4000",
+    "labels": [
+      "PTR"
+    ],
+    "instruction": [
+      ".FILL",
+      "x4000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        .END",
+    "labels": [],
+    "instruction": [
+      ".END"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

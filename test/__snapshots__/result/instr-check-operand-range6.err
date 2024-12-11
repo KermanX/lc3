@@ -1,0 +1,1 @@
+error: immediate operand #-33 of instruction `STR R0, R1, #-33` is out of range [-32, 31]

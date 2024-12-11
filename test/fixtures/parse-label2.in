@@ -1,0 +1,3 @@
+; Error: use label as an opcode.
+.ORIG   x3000
+Add     R1, R2, R3

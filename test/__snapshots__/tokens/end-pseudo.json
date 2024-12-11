@@ -1,0 +1,71 @@
+[
+  {
+    "source": "; The parser should skip the content after `.END`.",
+    "labels": [],
+    "instruction": [],
+    "comment": " The parser should skip the content after `.END`."
+  },
+  {
+    "source": ".ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD     R1, R2, R3",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": ".END",
+    "labels": [],
+    "instruction": [
+      ".END"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD     R4, R5, R6",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R4",
+      "R5",
+      "R6"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "; Normally, we would also test whether the parser skips invalid tokens after `.END`. However,",
+    "labels": [],
+    "instruction": [],
+    "comment": " Normally, we would also test whether the parser skips invalid tokens after `.END`. However,"
+  },
+  {
+    "source": "; considering that some students' implementations might process the entire file first before finding",
+    "labels": [],
+    "instruction": [],
+    "comment": " considering that some students' implementations might process the entire file first before finding"
+  },
+  {
+    "source": "; the `.END` position, we have chosen not to do so.",
+    "labels": [],
+    "instruction": [],
+    "comment": " the `.END` position, we have chosen not to do so."
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "source": "        .ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label1  ADD     R1, R2, R3",
+    "labels": [
+      "Label1"
+    ],
+    "instruction": [
+      "ADD",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label2  BR      Label1",
+    "labels": [
+      "Label2"
+    ],
+    "instruction": [
+      "BR",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label1  BR      Label2",
+    "labels": [
+      "Label1"
+    ],
+    "instruction": [
+      "BR",
+      "Label2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

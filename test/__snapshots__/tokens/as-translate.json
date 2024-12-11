@@ -1,0 +1,357 @@
+[
+  {
+    "source": "        .ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        ADD     R1, R2, R3",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        ADD     R4, R5, #-1",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R4",
+      "R5",
+      "#-1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        AND     R0, R0, R0",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R0",
+      "R0",
+      "R0"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label1  AND     R0, R1, #1",
+    "labels": [
+      "Label1"
+    ],
+    "instruction": [
+      "AND",
+      "R0",
+      "R1",
+      "#1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BR      Label1",
+    "labels": [],
+    "instruction": [
+      "BR",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BRn     Label1",
+    "labels": [],
+    "instruction": [
+      "BRn",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BRp     Label1",
+    "labels": [],
+    "instruction": [
+      "BRp",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BRz     Label1",
+    "labels": [],
+    "instruction": [
+      "BRz",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BRnp    Label1",
+    "labels": [],
+    "instruction": [
+      "BRnp",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BRzp    Label1",
+    "labels": [],
+    "instruction": [
+      "BRzp",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BRnz    Label1",
+    "labels": [],
+    "instruction": [
+      "BRnz",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BRnzp   Label1",
+    "labels": [],
+    "instruction": [
+      "BRnzp",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        JMP     R1",
+    "labels": [],
+    "instruction": [
+      "JMP",
+      "R1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        JSR     Label2",
+    "labels": [],
+    "instruction": [
+      "JSR",
+      "Label2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        JSRR    R1",
+    "labels": [],
+    "instruction": [
+      "JSRR",
+      "R1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        LD      R2, Label3",
+    "labels": [],
+    "instruction": [
+      "LD",
+      "R2",
+      "Label3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        LDI     R3, Label3",
+    "labels": [],
+    "instruction": [
+      "LDI",
+      "R3",
+      "Label3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        LDR     R4, R5, #-5",
+    "labels": [],
+    "instruction": [
+      "LDR",
+      "R4",
+      "R5",
+      "#-5"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        LEA     R1, Label1",
+    "labels": [],
+    "instruction": [
+      "LEA",
+      "R1",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        NOT     R1, R1",
+    "labels": [],
+    "instruction": [
+      "NOT",
+      "R1",
+      "R1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        NOT     R2, R3",
+    "labels": [],
+    "instruction": [
+      "NOT",
+      "R2",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        RET",
+    "labels": [],
+    "instruction": [
+      "RET"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        RTI",
+    "labels": [],
+    "instruction": [
+      "RTI"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        ST      R0, Label3",
+    "labels": [],
+    "instruction": [
+      "ST",
+      "R0",
+      "Label3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        STI     R1, Label3",
+    "labels": [],
+    "instruction": [
+      "STI",
+      "R1",
+      "Label3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        STR     R2, R4, #5",
+    "labels": [],
+    "instruction": [
+      "STR",
+      "R2",
+      "R4",
+      "#5"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        TRAP    x30",
+    "labels": [],
+    "instruction": [
+      "TRAP",
+      "x30"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        GETC",
+    "labels": [
+      "GETC"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "        OUT",
+    "labels": [
+      "OUT"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "        PUTS",
+    "labels": [
+      "PUTS"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "        IN",
+    "labels": [
+      "IN"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "        PUTSP",
+    "labels": [
+      "PUTSP"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "        HALT",
+    "labels": [
+      "HALT"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "Label2  .FILL   xFFFF",
+    "labels": [
+      "Label2"
+    ],
+    "instruction": [
+      ".FILL",
+      "xFFFF"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label3  .BLKW   10",
+    "labels": [
+      "Label3"
+    ],
+    "instruction": [
+      ".BLKW",
+      "10"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        .STRINGZ \"abc\"",
+    "labels": [],
+    "instruction": [
+      ".STRINGZ"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

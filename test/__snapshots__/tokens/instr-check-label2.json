@@ -1,0 +1,33 @@
+[
+  {
+    "source": "; We cannot attach label to `.END`.",
+    "labels": [],
+    "instruction": [],
+    "comment": " We cannot attach label to `.END`."
+  },
+  {
+    "source": "        .ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "LOOP    .END",
+    "labels": [
+      "LOOP"
+    ],
+    "instruction": [
+      ".END"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

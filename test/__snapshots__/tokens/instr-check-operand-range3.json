@@ -1,0 +1,26 @@
+[
+  {
+    "source": ".ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "TRAP    #256",
+    "labels": [],
+    "instruction": [
+      "TRAP",
+      "#256"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

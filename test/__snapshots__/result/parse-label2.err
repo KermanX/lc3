@@ -1,0 +1,1 @@
+error: at token `R1`: expected token kind `Token::Opcode` or `Token::Pseudo`, but got `Token::Register`

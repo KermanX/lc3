@@ -1,0 +1,1 @@
+error: instruction `HALT #13` expects 0 operand(s), but got 1 operand(s)

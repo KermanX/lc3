@@ -1,0 +1,1 @@
+error: immediate operand #32 of instruction `LDR R1, R2, #32` is out of range [-32, 31]

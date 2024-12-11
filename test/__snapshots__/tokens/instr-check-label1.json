@@ -1,0 +1,25 @@
+[
+  {
+    "source": "; We cannot attach label to `.ORIG`.",
+    "labels": [],
+    "instruction": [],
+    "comment": " We cannot attach label to `.ORIG`."
+  },
+  {
+    "source": "LOOP    .ORIG   x3000",
+    "labels": [
+      "LOOP"
+    ],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

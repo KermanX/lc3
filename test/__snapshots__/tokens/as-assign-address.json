@@ -1,0 +1,164 @@
+[
+  {
+    "source": "        .ORIG       x100",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x100"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label1  .BLKW       10",
+    "labels": [
+      "Label1"
+    ],
+    "instruction": [
+      ".BLKW",
+      "10"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label2  .STRINGZ    \"Hello\"",
+    "labels": [
+      "Label2"
+    ],
+    "instruction": [
+      ".STRINGZ"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label3  ADD         R1, R2, R3",
+    "labels": [
+      "Label3"
+    ],
+    "instruction": [
+      "ADD",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label4  NOT         R1, R2",
+    "labels": [
+      "Label4"
+    ],
+    "instruction": [
+      "NOT",
+      "R1",
+      "R2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label5  .STRINGZ    \"World!\"",
+    "labels": [
+      "Label5"
+    ],
+    "instruction": [
+      ".STRINGZ"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label6  .BLKW       5",
+    "labels": [
+      "Label6"
+    ],
+    "instruction": [
+      ".BLKW",
+      "5"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Label7  HALT",
+    "labels": [
+      "Label7",
+      "HALT"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "        BR          Label1",
+    "labels": [],
+    "instruction": [
+      "BR",
+      "Label1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BR          Label2",
+    "labels": [],
+    "instruction": [
+      "BR",
+      "Label2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BR          Label3",
+    "labels": [],
+    "instruction": [
+      "BR",
+      "Label3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BR          Label4",
+    "labels": [],
+    "instruction": [
+      "BR",
+      "Label4"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BR          Label5",
+    "labels": [],
+    "instruction": [
+      "BR",
+      "Label5"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BR          Label6",
+    "labels": [],
+    "instruction": [
+      "BR",
+      "Label6"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        BR          Label7",
+    "labels": [],
+    "instruction": [
+      "BR",
+      "Label7"
+    ],
+    "comment": ""
+  },
+  {
+    "source": ".END",
+    "labels": [],
+    "instruction": [
+      ".END"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

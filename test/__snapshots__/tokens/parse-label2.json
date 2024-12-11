@@ -1,0 +1,34 @@
+[
+  {
+    "source": "; Error: use label as an opcode.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Error: use label as an opcode."
+  },
+  {
+    "source": ".ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "Add     R1, R2, R3",
+    "labels": [],
+    "instruction": [
+      "Add",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

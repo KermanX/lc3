@@ -1,0 +1,3 @@
+; We cannot attach label to `.END`.
+        .ORIG   x3000
+LOOP    .END

@@ -1,0 +1,44 @@
+[
+  {
+    "source": "; Check whether the parser can distinguish between similar labels and opcodes.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Check whether the parser can distinguish between similar labels and opcodes."
+  },
+  {
+    "source": "        .ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "And     ADD     R1, R2, R3",
+    "labels": [
+      "And"
+    ],
+    "instruction": [
+      "ADD",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "        .END",
+    "labels": [],
+    "instruction": [
+      ".END"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

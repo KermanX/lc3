@@ -1,0 +1,490 @@
+[
+  {
+    "source": ".ORIG x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "LDI R0, INPUT   ; a",
+    "labels": [],
+    "instruction": [
+      "LDI",
+      "R0",
+      "INPUT"
+    ],
+    "comment": " a"
+  },
+  {
+    "source": "AND R1, R1, x0  ; counter",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R1",
+      "R1",
+      "x0"
+    ],
+    "comment": " counter"
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "LOOP_BODY",
+    "labels": [
+      "LOOP_BODY"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; if R0 == 1 then FINISH",
+    "labels": [],
+    "instruction": [],
+    "comment": " if R0 == 1 then FINISH"
+  },
+  {
+    "source": "AND R2, R2, x0",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R2",
+      "R2",
+      "x0"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "NOT R2, R2",
+    "labels": [],
+    "instruction": [
+      "NOT",
+      "R2",
+      "R2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD R2, R0, R2",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R2",
+      "R0",
+      "R2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "BRz FINISH",
+    "labels": [],
+    "instruction": [
+      "BRz",
+      "FINISH"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; R1++",
+    "labels": [],
+    "instruction": [],
+    "comment": " R1++"
+  },
+  {
+    "source": "ADD R1, R1, x1",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R1",
+      "R1",
+      "x1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; if R0%2 == 0 then EVEN",
+    "labels": [],
+    "instruction": [],
+    "comment": " if R0%2 == 0 then EVEN"
+  },
+  {
+    "source": "AND R2, R0, x1",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R2",
+      "R0",
+      "x1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "BRz EVEN",
+    "labels": [],
+    "instruction": [
+      "BRz",
+      "EVEN"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; R0 = 3*R0 + 1",
+    "labels": [],
+    "instruction": [],
+    "comment": " R0 = 3*R0 + 1"
+  },
+  {
+    "source": "ADD R2, R0, R0",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R2",
+      "R0",
+      "R0"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD R0, R2, R0",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R0",
+      "R2",
+      "R0"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD R0, R0, x1",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R0",
+      "R0",
+      "x1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "BRnzp LOOP_BODY",
+    "labels": [],
+    "instruction": [
+      "BRnzp",
+      "LOOP_BODY"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "EVEN ; R0 = R0/2",
+    "labels": [
+      "EVEN"
+    ],
+    "instruction": [],
+    "comment": " R0 = R0/2"
+  },
+  {
+    "source": "AND R2, R2, x0",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R2",
+      "R2",
+      "x0"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD R2, R2, x1",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R2",
+      "R2",
+      "x1"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "AND R3, R3, x0",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R3",
+      "R3",
+      "x0"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD R3, R3, x2",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R3",
+      "R3",
+      "x2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "AND R4, R4, x0  ; result",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R4",
+      "R4",
+      "x0"
+    ],
+    "comment": " result"
+  },
+  {
+    "source": "NEXT_BIT",
+    "labels": [
+      "NEXT_BIT"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "AND R5, R0, R3",
+    "labels": [],
+    "instruction": [
+      "AND",
+      "R5",
+      "R0",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "BRz SKIP_ADD",
+    "labels": [],
+    "instruction": [
+      "BRz",
+      "SKIP_ADD"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD R4, R4, R2",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R4",
+      "R4",
+      "R2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "SKIP_ADD",
+    "labels": [
+      "SKIP_ADD"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "; Shift R2 and R3",
+    "labels": [],
+    "instruction": [],
+    "comment": " Shift R2 and R3"
+  },
+  {
+    "source": "ADD R2, R2, R2",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R2",
+      "R2",
+      "R2"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "ADD R3, R3, R3",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R3",
+      "R3",
+      "R3"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "BRz FINISH_DIV",
+    "labels": [],
+    "instruction": [
+      "BRz",
+      "FINISH_DIV"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "BRnzp NEXT_BIT",
+    "labels": [],
+    "instruction": [
+      "BRnzp",
+      "NEXT_BIT"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "FINISH_DIV",
+    "labels": [
+      "FINISH_DIV"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "ADD R0, R4, x0",
+    "labels": [],
+    "instruction": [
+      "ADD",
+      "R0",
+      "R4",
+      "x0"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "BRnzp LOOP_BODY",
+    "labels": [],
+    "instruction": [
+      "BRnzp",
+      "LOOP_BODY"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "FINISH",
+    "labels": [
+      "FINISH"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "STI R1, OUTPUT",
+    "labels": [],
+    "instruction": [
+      "STI",
+      "R1",
+      "OUTPUT"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "HALT",
+    "labels": [
+      "HALT"
+    ],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": "INPUT  .FILL x3100",
+    "labels": [
+      "INPUT"
+    ],
+    "instruction": [
+      ".FILL",
+      "x3100"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "OUTPUT .FILL x3101",
+    "labels": [
+      "OUTPUT"
+    ],
+    "instruction": [
+      ".FILL",
+      "x3101"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  },
+  {
+    "source": ".END",
+    "labels": [],
+    "instruction": [
+      ".END"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

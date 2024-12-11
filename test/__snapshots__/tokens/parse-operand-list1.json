@@ -1,0 +1,23 @@
+[
+  {
+    "source": "; `ADD` will be treated as the start of a new instruction, rather than an operand of `.ORIG`.",
+    "labels": [],
+    "instruction": [],
+    "comment": " `ADD` will be treated as the start of a new instruction, rather than an operand of `.ORIG`."
+  },
+  {
+    "source": ".ORIG   ADD",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "ADD"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

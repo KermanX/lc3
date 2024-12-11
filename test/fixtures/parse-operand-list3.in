@@ -1,0 +1,2 @@
+; `ADD` will be treated as an operand of the `.ORIG` instruction.
+.ORIG   x3000, ADD

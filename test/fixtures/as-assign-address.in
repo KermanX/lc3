@@ -1,0 +1,16 @@
+        .ORIG       x100
+Label1  .BLKW       10
+Label2  .STRINGZ    "Hello"
+Label3  ADD         R1, R2, R3
+Label4  NOT         R1, R2
+Label5  .STRINGZ    "World!"
+Label6  .BLKW       5
+Label7  HALT
+        BR          Label1
+        BR          Label2
+        BR          Label3
+        BR          Label4
+        BR          Label5
+        BR          Label6
+        BR          Label7
+.END

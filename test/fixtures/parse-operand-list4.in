@@ -1,0 +1,2 @@
+; The extra comma will be treated as an operand of the instruction.
+.ORIG   x3000,,

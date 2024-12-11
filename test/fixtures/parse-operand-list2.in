@@ -1,0 +1,2 @@
+; `,` will be treated as the start of a new instruction, rather than an operand of `.ORIG`.
+.ORIG   ,

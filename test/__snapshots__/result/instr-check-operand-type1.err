@@ -1,0 +1,1 @@
+error: operand 1 of instruction `.ORIG 3000` should be of type `Immediate`, but got `Number`

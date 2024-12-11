@@ -1,0 +1,1 @@
+error: instruction `LOOP .ORIG #12288` does not allow a label

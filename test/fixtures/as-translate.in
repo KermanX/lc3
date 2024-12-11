@@ -1,0 +1,37 @@
+        .ORIG   x3000
+        ADD     R1, R2, R3
+        ADD     R4, R5, #-1
+        AND     R0, R0, R0
+Label1  AND     R0, R1, #1
+        BR      Label1
+        BRn     Label1
+        BRp     Label1
+        BRz     Label1
+        BRnp    Label1
+        BRzp    Label1
+        BRnz    Label1
+        BRnzp   Label1
+        JMP     R1
+        JSR     Label2
+        JSRR    R1
+        LD      R2, Label3
+        LDI     R3, Label3
+        LDR     R4, R5, #-5
+        LEA     R1, Label1
+        NOT     R1, R1
+        NOT     R2, R3
+        RET
+        RTI
+        ST      R0, Label3
+        STI     R1, Label3
+        STR     R2, R4, #5
+        TRAP    x30
+        GETC
+        OUT
+        PUTS
+        IN
+        PUTSP
+        HALT
+Label2  .FILL   xFFFF
+Label3  .BLKW   10
+        .STRINGZ "abc"

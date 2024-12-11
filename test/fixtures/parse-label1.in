@@ -1,0 +1,4 @@
+; Check whether the parser can distinguish between similar labels and opcodes.
+        .ORIG   x3000
+And     ADD     R1, R2, R3
+        .END

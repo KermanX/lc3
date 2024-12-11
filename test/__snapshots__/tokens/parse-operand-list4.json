@@ -1,0 +1,23 @@
+[
+  {
+    "source": "; The extra comma will be treated as an operand of the instruction.",
+    "labels": [],
+    "instruction": [],
+    "comment": " The extra comma will be treated as an operand of the instruction."
+  },
+  {
+    "source": ".ORIG   x3000,,",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

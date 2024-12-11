@@ -1,0 +1,24 @@
+[
+  {
+    "source": "; Test whether the parser can handle extra commas correctly.",
+    "labels": [],
+    "instruction": [],
+    "comment": " Test whether the parser can handle extra commas correctly."
+  },
+  {
+    "source": ".ORIG   x3000, x3000,",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

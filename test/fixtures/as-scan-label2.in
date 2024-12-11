@@ -1,0 +1,4 @@
+        .ORIG   x3000
+Label1  ADD     R1, R2, R3
+Label2  BR      Label1
+Label1  BR      Label2

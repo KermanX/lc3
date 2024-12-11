@@ -1,0 +1,1 @@
+error: expected the first instruction to be `.ORIG`, but got `.END`

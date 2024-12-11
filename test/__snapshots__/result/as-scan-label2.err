@@ -1,0 +1,1 @@
+error: label `Label1` redefined by instruction `Label1 BR Label2`

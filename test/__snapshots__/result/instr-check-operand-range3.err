@@ -1,0 +1,1 @@
+error: immediate operand #256 of instruction `TRAP #256` is out of range [0, 255]

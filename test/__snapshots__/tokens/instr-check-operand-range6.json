@@ -1,0 +1,28 @@
+[
+  {
+    "source": ".ORIG   x3000",
+    "labels": [],
+    "instruction": [
+      ".ORIG",
+      "x3000"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "STR     R0, R1, #-33",
+    "labels": [],
+    "instruction": [
+      "STR",
+      "R0",
+      "R1",
+      "#-33"
+    ],
+    "comment": ""
+  },
+  {
+    "source": "",
+    "labels": [],
+    "instruction": [],
+    "comment": ""
+  }
+]

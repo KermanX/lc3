@@ -1,0 +1,8 @@
+; The parser should skip the content after `.END`.
+.ORIG   x3000
+ADD     R1, R2, R3
+.END
+ADD     R4, R5, R6
+; Normally, we would also test whether the parser skips invalid tokens after `.END`. However,
+; considering that some students' implementations might process the entire file first before finding
+; the `.END` position, we have chosen not to do so.

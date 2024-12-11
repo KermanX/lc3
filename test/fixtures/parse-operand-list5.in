@@ -1,0 +1,2 @@
+; Test whether the parser can handle extra commas correctly.
+.ORIG   x3000, x3000,
