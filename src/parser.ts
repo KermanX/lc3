@@ -36,7 +36,6 @@ export function tryParseImmediate(operand: string): number | null {
   if (!Number.isFinite(immediate)) {
     throw new TypeError(`Invalid immediate: ${operand}`)
   }
-  // TODO: Check range
   return immediate
 }
 
