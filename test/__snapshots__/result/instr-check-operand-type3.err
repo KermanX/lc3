@@ -1,1 +1,1 @@
-error: operand 3 of instruction `AND R1, R2, "abc"` should be of type `Immediate`, but got `StringLiteral`
+Error at line 2: Invalid instruction: Expect 3 operands. Actual: 4

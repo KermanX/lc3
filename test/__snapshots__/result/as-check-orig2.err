@@ -1,1 +1,1 @@
-error: multiple `.ORIG` pseudo-instructions found
+Error at line 3: Duplicate .ORIG directive

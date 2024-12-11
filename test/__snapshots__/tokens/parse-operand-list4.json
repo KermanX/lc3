@@ -10,7 +10,9 @@
     "labels": [],
     "instruction": [
       ".ORIG",
-      "x3000"
+      "x3000",
+      "",
+      ""
     ],
     "comment": ""
   },

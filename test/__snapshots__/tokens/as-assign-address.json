@@ -25,7 +25,8 @@
       "Label2"
     ],
     "instruction": [
-      ".STRINGZ"
+      ".STRINGZ",
+      "\"Hello\""
     ],
     "comment": ""
   },
@@ -60,7 +61,8 @@
       "Label5"
     ],
     "instruction": [
-      ".STRINGZ"
+      ".STRINGZ",
+      "\"World!\""
     ],
     "comment": ""
   },
@@ -78,10 +80,11 @@
   {
     "source": "Label7  HALT",
     "labels": [
-      "Label7",
+      "Label7"
+    ],
+    "instruction": [
       "HALT"
     ],
-    "instruction": [],
     "comment": ""
   },
   {

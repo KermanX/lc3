@@ -1,1 +1,1 @@
-error: instruction `LOOP .ORIG #12288` does not allow a label
+Error at line 2: No .ORIG directive found

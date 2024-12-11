@@ -1,1 +1,1 @@
-error: instruction `LOOP .END` does not allow a label
+Expected next instruction after label

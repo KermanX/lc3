@@ -7,6 +7,7 @@ export type SymbolTable = Record<string, number>
 export function buildSymbolTable(lines: Line[]): SymbolTable {
   const table: SymbolTable = {}
   let address: number | undefined
+  let needNextAddress = false
   for (let i = 0; i < lines.length; i++) {
     try {
       const line = lines[i]
@@ -19,11 +20,15 @@ export function buildSymbolTable(lines: Line[]): SymbolTable {
           }
           table[label] = assertNonNullish(address, 'No .ORIG directive found')
         }
+        needNextAddress = true
       }
 
       if (instruction.length === 0)
         continue
       if (instruction[0].toUpperCase() === '.ORIG') {
+        if (address !== undefined) {
+          throw new LC3Error('Duplicate .ORIG directive')
+        }
         if (instruction.length !== 2) {
           throw new LC3Error('Invalid .ORIG directive')
         }
@@ -34,11 +39,17 @@ export function buildSymbolTable(lines: Line[]): SymbolTable {
         line.address = address
 
         // Increment address based on instruction
-        if (instruction[0].toUpperCase() === '.BLKW') {
+        if (instruction[0].toUpperCase() === '.END') {
+          break
+        }
+        else if (instruction[0].toUpperCase() === '.BLKW') {
           if (instruction.length !== 2) {
             throw new LC3Error('Invalid .BLKW directive')
           }
-          const size = parseImmediate(instruction[1])
+          const size = Number(instruction[1])
+          if (!Number.isFinite(size) || size < 0) {
+            throw new LC3Error(`Invalid .BLKW size: ${instruction[1]}`)
+          }
           address += size
         }
         else if (instruction[0].toUpperCase() === '.STRINGZ') {
@@ -47,7 +58,7 @@ export function buildSymbolTable(lines: Line[]): SymbolTable {
           }
           try {
             const string = JSON.parse(instruction[1])
-            address += string.length
+            address += string.length + 1
           }
           catch {
             throw new LC3Error('Invalid .STRINGZ directive')
@@ -56,6 +67,7 @@ export function buildSymbolTable(lines: Line[]): SymbolTable {
         else if (instruction.length > 0) {
           address += 1
         }
+        needNextAddress = false
       }
     }
     catch (e) {
@@ -64,6 +76,9 @@ export function buildSymbolTable(lines: Line[]): SymbolTable {
       }
       throw e
     }
+  }
+  if (needNextAddress) {
+    throw new LC3Error('Expected next instruction after label')
   }
   return table
 }

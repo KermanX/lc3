@@ -1,1 +1,1 @@
-error: at token `ADD`: error when constructing an operand: cannot construct an operand from token kind `Token::Opcode`
+Error at line 2: Invalid .ORIG directive

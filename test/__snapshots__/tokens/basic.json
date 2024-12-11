@@ -433,10 +433,10 @@
   },
   {
     "source": "HALT",
-    "labels": [
+    "labels": [],
+    "instruction": [
       "HALT"
     ],
-    "instruction": [],
     "comment": ""
   },
   {

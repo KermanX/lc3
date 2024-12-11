@@ -10,11 +10,11 @@
   },
   {
     "source": "HALT    #13",
-    "labels": [
+    "labels": [],
+    "instruction": [
       "HALT",
       "#13"
     ],
-    "instruction": [],
     "comment": ""
   },
   {

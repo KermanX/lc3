@@ -10,7 +10,10 @@ export interface Line {
 }
 
 function isOpcodeOrPseudoCode(str: string | undefined): boolean {
-  return str !== undefined && (str.toUpperCase() in opcodes || str[0] === '.')
+  return str !== undefined && (
+    (/^(?:[a-z]+|[A-Z]+|BR[nzp]*)$/.test(str) && str.toUpperCase() in opcodes)
+    || str[0] === '.'
+  )
 }
 
 function tokenizeLine(line: string): Line {
@@ -35,6 +38,9 @@ function tokenizeLine(line: string): Line {
       else if (char === '"') {
         string = buildingString
         buildingString = undefined
+      }
+      else {
+        buildingString += char
       }
     }
     else if (char === ';') {
@@ -61,25 +67,31 @@ function tokenizeLine(line: string): Line {
 
   let labels: string[]
   let instruction: string[]
-  if (operands.length > 0 || isOpcodeOrPseudoCode(labelsAndOpArr.at(-2))) {
+  const last2IsOpcodeOrPseudoCode = isOpcodeOrPseudoCode(labelsAndOpArr.at(-2))
+  if (operands.length > 0 || last2IsOpcodeOrPseudoCode) {
+    if (!last2IsOpcodeOrPseudoCode) {
+      throw new LC3Error('Invalid instruction')
+    }
     labels = labelsAndOpArr.slice(0, -2)
     instruction = [...labelsAndOpArr.slice(-2), ...operands]
-  } else if (isOpcodeOrPseudoCode(labelsAndOpArr.at(-1))){
+  }
+  else if (isOpcodeOrPseudoCode(labelsAndOpArr.at(-1))) {
     labels = labelsAndOpArr.slice(0, -1)
     instruction = [...labelsAndOpArr.slice(-1), ...operands]
-  } else {
+  }
+  else {
     labels = labelsAndOpArr
     instruction = operands
   }
 
-  if (string) {
+  if (string !== undefined) {
     instruction.push(JSON.stringify(string))
   }
 
   return {
     source: line,
     labels: labels.filter(Boolean),
-    instruction: instruction.filter(Boolean),
+    instruction,
     comment: comment || '',
   }
 }

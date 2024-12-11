@@ -1,1 +1,1 @@
-error: operand 1 of instruction `.ORIG 3000` should be of type `Immediate`, but got `Number`
+Error at line 1: Invalid operand: 3000. Expected immediate

@@ -13,7 +13,7 @@ function createBr(cond: string): OpcodeHandler {
   return function (ctx) {
     const [label] = ctx.getOperands(1)
     const offset = ctx.immediate(label, 9)
-    return `1101${cond}${offset}`
+    return `0000${cond}${offset}`
   }
 }
 
@@ -28,6 +28,13 @@ function createLDSTR(opcode: string): OpcodeHandler {
   return function (ctx) {
     const [r, br, pcOffset] = ctx.getOperands(3)
     return `${opcode}${ctx.register(r)}${ctx.register(br)}${ctx.immediate(pcOffset, 6)}`
+  }
+}
+
+function createConstant(code: string): OpcodeHandler {
+  return function (ctx) {
+    ctx.getOperands(0)
+    return code
   }
 }
 
@@ -84,18 +91,19 @@ export const opcodes: Record<string, OpcodeHandler> = {
     return `1001${ctx.register(dr)}${ctx.register(sr)}111111`
   },
 
-  RET(ctx) {
-    ctx.getOperands(0)
-    return '1100000111000000'
-  },
+  RET: createConstant('1100000111000000'),
 
-  RTI(ctx) {
-    ctx.getOperands(0)
-    return '1000000000000000'
-  },
+  RTI: createConstant('1000000000000000'),
 
   TRAP(ctx) {
     const [vector] = ctx.getOperands(1)
-    return `11110000${ctx.immediate(vector, 8)}`
+    return `11110000${ctx.immediate(vector, 8, true)}`
   },
+
+  HALT: createConstant('1111000000100101'),
+  PUTS: createConstant('1111000000100010'),
+  GETC: createConstant('1111000000100000'),
+  OUT: createConstant('1111000000100001'),
+  IN: createConstant('1111000000100011'),
+  PUTSP: createConstant('1111000000100100'),
 }

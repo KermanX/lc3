@@ -1,1 +1,1 @@
-error: expected the first instruction to be `.ORIG`, but got `.END`
+Error at line 1: No .ORIG directive found

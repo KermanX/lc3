@@ -272,50 +272,50 @@
   },
   {
     "source": "        GETC",
-    "labels": [
+    "labels": [],
+    "instruction": [
       "GETC"
     ],
-    "instruction": [],
     "comment": ""
   },
   {
     "source": "        OUT",
-    "labels": [
+    "labels": [],
+    "instruction": [
       "OUT"
     ],
-    "instruction": [],
     "comment": ""
   },
   {
     "source": "        PUTS",
-    "labels": [
+    "labels": [],
+    "instruction": [
       "PUTS"
     ],
-    "instruction": [],
     "comment": ""
   },
   {
     "source": "        IN",
-    "labels": [
+    "labels": [],
+    "instruction": [
       "IN"
     ],
-    "instruction": [],
     "comment": ""
   },
   {
     "source": "        PUTSP",
-    "labels": [
+    "labels": [],
+    "instruction": [
       "PUTSP"
     ],
-    "instruction": [],
     "comment": ""
   },
   {
     "source": "        HALT",
-    "labels": [
+    "labels": [],
+    "instruction": [
       "HALT"
     ],
-    "instruction": [],
     "comment": ""
   },
   {
@@ -344,7 +344,8 @@
     "source": "        .STRINGZ \"abc\"",
     "labels": [],
     "instruction": [
-      ".STRINGZ"
+      ".STRINGZ",
+      "\"abc\""
     ],
     "comment": ""
   },

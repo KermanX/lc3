@@ -1,1 +1,1 @@
-error: instruction `ADD` expects 3 operand(s), but got 0 operand(s)
+Error at line 2: Invalid instruction: Expect 3 operands. Actual: 0

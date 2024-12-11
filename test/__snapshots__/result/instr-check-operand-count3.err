@@ -1,1 +1,1 @@
-error: instruction `HALT #13` expects 0 operand(s), but got 1 operand(s)
+Error at line 2: Invalid instruction: Expect 0 operands. Actual: 1
