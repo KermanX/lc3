@@ -97,7 +97,7 @@ function tokenizeLine(line: string): Line {
 }
 
 export function tokenize(source: string): Line[] {
-  return source.split('\n').map((line, i) => {
+  return source.split(/\r?\n/).map((line, i) => {
     try {
       return tokenizeLine(line)
     }
