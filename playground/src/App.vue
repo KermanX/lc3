@@ -15,7 +15,7 @@ import { input, load, output } from './states'
           By _Kerman
           <a
             i-carbon-logo-github flex-grow inline-block w-1.2em h-1.2em hover:op-80
-            href="https://github.com/KermanX" target="_blank"
+            href="https://github.com/KermanX/lc3-assembler" target="_blank"
           />
         </div>
       </h1>
