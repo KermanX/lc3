@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Editor from './Editor.vue'
-import { input, load, output } from './states'
+import { input, load, output, showAddress } from './states'
 </script>
 
 <template>
@@ -70,8 +70,14 @@ import { input, load, output } from './states'
                 <mi>Input Minified</mi>
               </mfrac>
             </math>={{ treeShakeRate.toFixed(2) }}%<span op80>)</span>
-          </span>
-          <div flex-grow /> -->
+          </span> -->
+          <div flex-grow />
+          <label flex align-center gap-1 select-none mr-4>
+            <span op-80 font-mono text-4>
+              Show address:
+            </span>
+            <input v-model="showAddress" type="checkbox">
+          </label>
         </h2>
         <div flex-grow relative max-h-full>
           <Editor :model-value="output.result ?? ''" lang="plaintext" readonly class="w-full h-full max-h-full" />
