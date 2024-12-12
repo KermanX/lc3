@@ -1,5 +1,5 @@
 import { codegen } from './codegen'
-import { buildSymbolTable } from './symbols'
+import { link } from './linker'
 import { tokenize } from './tokenizer'
 import { LC3Error } from './utils'
 
@@ -14,7 +14,7 @@ export type Result = {
 export function assemble(source: string): Result {
   try {
     const lines = tokenize(source)
-    const symbols = buildSymbolTable(lines)
+    const symbols = link(lines)
     const result = codegen(lines, symbols)
     return { result, error: null }
   }

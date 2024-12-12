@@ -1,6 +1,6 @@
 import { opcodes } from './opcodes'
 import { tryParseImmediate, tryParseRegister } from './parser'
-import type { SymbolTable } from './symbols'
+import type { SymbolTable } from './linker'
 import type { Line } from './tokenizer'
 import { LC3Error, assertNonNullish } from './utils'
 

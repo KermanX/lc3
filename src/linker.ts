@@ -4,7 +4,7 @@ import { LC3Error, assertNonNullish } from './utils'
 
 export type SymbolTable = Record<string, number>
 
-export function buildSymbolTable(lines: Line[]): SymbolTable {
+export function link(lines: Line[]): SymbolTable {
   const table: SymbolTable = {}
   let address: number | undefined
   let needNextAddress = false
