@@ -10,10 +10,7 @@ export interface Line {
 }
 
 function isOpcodeOrPseudoCode(str: string | undefined): boolean {
-  return str !== undefined && (
-    (/^(?:[a-z]+|[A-Z]+|BR[nzp]*)$/.test(str) && str.toUpperCase() in opcodes)
-    || str[0] === '.'
-  )
+  return str !== undefined && ((str in opcodes) || str[0] === '.')
 }
 
 function tokenizeLine(line: string): Line {

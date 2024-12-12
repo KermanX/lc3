@@ -22,7 +22,7 @@ export function codegen(lines: Line[], symbols: SymbolTable): string {
       const { instruction, address } = lines[i]
       if (instruction.length === 0)
         continue
-      const op = instruction[0].toUpperCase()
+      const op = instruction[0]
       const context: CodegenCtx = {
         getOperands(count) {
           if (instruction.length - 1 !== count) {
@@ -107,7 +107,7 @@ export function codegen(lines: Line[], symbols: SymbolTable): string {
         }
       }
       else {
-        throw new LC3Error(`Invalid instruction: ${instruction.join(', ')}`)
+        throw new LC3Error(`Invalid instruction`)
       }
     }
     catch (e: unknown) {

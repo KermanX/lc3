@@ -43,21 +43,21 @@ export const opcodes: Record<string, OpcodeHandler> = {
   AND: createAddOrAnd('0101'),
 
   BR: createBr('111'),
-  BRN: createBr('100'),
-  BRZ: createBr('010'),
-  BRP: createBr('001'),
-  BRNZ: createBr('110'),
-  BRZN: createBr('110'),
-  BRNP: createBr('101'),
-  BRPN: createBr('101'),
-  BRZP: createBr('011'),
-  BRPZ: createBr('011'),
-  BRNZP: createBr('111'),
-  BRNPZ: createBr('111'),
-  BRZNP: createBr('111'),
-  BRZPN: createBr('111'),
-  BRPNZ: createBr('111'),
-  BRPZN: createBr('111'),
+  BRn: createBr('100'),
+  BRz: createBr('010'),
+  BRp: createBr('001'),
+  BRnz: createBr('110'),
+  BRzn: createBr('110'),
+  BRnp: createBr('101'),
+  BRpn: createBr('101'),
+  BRzp: createBr('011'),
+  BRpz: createBr('011'),
+  BRnzp: createBr('111'),
+  BRnpz: createBr('111'),
+  BRznp: createBr('111'),
+  BRzpn: createBr('111'),
+  BRpnz: createBr('111'),
+  BRpzn: createBr('111'),
 
   JMP(ctx) {
     const [baseR] = ctx.getOperands(1)
@@ -106,4 +106,9 @@ export const opcodes: Record<string, OpcodeHandler> = {
   OUT: createConstant('1111000000100001'),
   IN: createConstant('1111000000100011'),
   PUTSP: createConstant('1111000000100100'),
+}
+
+// Add lowercase opcodes
+for (const name in opcodes) {
+  opcodes[name.toLowerCase()] = opcodes[name]
 }
