@@ -1,5 +1,5 @@
 import { compressToBase64, decompressFromBase64 } from 'lz-string'
-import { assemble } from 'lc3-assembler'
+import { assemble } from 'lc3'
 import { computed, ref, watch, watchEffect } from 'vue'
 import { DEMO } from './examples'
 

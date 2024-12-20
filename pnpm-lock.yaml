@@ -65,7 +65,7 @@ importers:
       '@vueuse/core':
         specifier: ^11.1.0
         version: 11.3.0(vue@3.5.13(typescript@5.7.2))
-      lc3-assembler:
+      lc3:
         specifier: link:../
         version: link:..
       lz-string:
