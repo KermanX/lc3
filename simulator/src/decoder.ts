@@ -1,4 +1,8 @@
 export function createDecoder(inst: string) {
+  if (inst.length !== 16) {
+    throw new Error(`Invalid instruction: ${inst}`)
+  }
+
   let index = 0
   function eat(bits: number): string {
     const raw = inst.slice(index, index + bits)
