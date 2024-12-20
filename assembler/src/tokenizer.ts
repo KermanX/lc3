@@ -1,5 +1,5 @@
+import { LC3Error } from '../../shared/utils'
 import { opcodes } from './opcodes'
-import { LC3Error } from './utils'
 
 export interface Line {
   source: string

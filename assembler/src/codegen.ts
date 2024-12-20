@@ -1,8 +1,8 @@
+import { LC3Error, assertNonNullish } from '../../shared/utils'
 import { opcodes } from './opcodes'
 import { tryParseImmediate, tryParseRegister } from './parser'
 import type { SymbolTable } from './linker'
 import type { Line } from './tokenizer'
-import { LC3Error, assertNonNullish } from './utils'
 
 export interface CodegenCtx {
   getOperands: (count: number) => string[]

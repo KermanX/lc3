@@ -1,7 +1,7 @@
+import { LC3Error } from '../../shared/utils'
 import { codegen } from './codegen'
 import { link } from './linker'
 import { tokenize } from './tokenizer'
-import { LC3Error } from './utils'
 
 export type Result = {
   result: string

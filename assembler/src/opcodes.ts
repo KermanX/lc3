@@ -1,3 +1,4 @@
+import { OP_CODES } from '../../shared/constants'
 import type { OpcodeHandler } from './codegen'
 
 function createAddOrAnd(opcode: string): OpcodeHandler {
@@ -13,7 +14,7 @@ function createBr(cond: string): OpcodeHandler {
   return function (ctx) {
     const [label] = ctx.getOperands(1)
     const offset = ctx.immediate(label, 9)
-    return `0000${cond}${offset}`
+    return `${OP_CODES.BR}${cond}${offset}`
   }
 }
 
@@ -39,8 +40,8 @@ function createConstant(code: string): OpcodeHandler {
 }
 
 export const opcodes: Record<string, OpcodeHandler> = {
-  ADD: createAddOrAnd('0001'),
-  AND: createAddOrAnd('0101'),
+  ADD: createAddOrAnd(OP_CODES.ADD),
+  AND: createAddOrAnd(OP_CODES.AND),
 
   BR: createBr('111'),
   BRn: createBr('100'),
@@ -61,34 +62,34 @@ export const opcodes: Record<string, OpcodeHandler> = {
 
   JMP(ctx) {
     const [baseR] = ctx.getOperands(1)
-    return `1100000${ctx.register(baseR)}000000`
+    return `${OP_CODES.JMP}000${ctx.register(baseR)}000000`
   },
 
   JSR(ctx) {
     const [pcOffset] = ctx.getOperands(1)
-    return `01001${ctx.immediate(pcOffset, 11)}`
+    return `${OP_CODES.JSR}1${ctx.immediate(pcOffset, 11)}`
   },
 
   JSRR(ctx) {
     const [baseR] = ctx.getOperands(1)
-    return `0100000${ctx.register(baseR)}000000`
+    return `${OP_CODES.JSR}000${ctx.register(baseR)}000000`
   },
 
-  LD: createLDSTI('0010'),
-  LDI: createLDSTI('1010'),
-  LDR: createLDSTR('0110'),
-  ST: createLDSTI('0011'),
-  STI: createLDSTI('1011'),
-  STR: createLDSTR('0111'),
+  LD: createLDSTI(OP_CODES.LD),
+  LDI: createLDSTI(OP_CODES.LDI),
+  LDR: createLDSTR(OP_CODES.LDR),
+  ST: createLDSTI(OP_CODES.ST),
+  STI: createLDSTI(OP_CODES.STI),
+  STR: createLDSTR(OP_CODES.STR),
 
   LEA(ctx) {
     const [dr, offset] = ctx.getOperands(2)
-    return `1110${ctx.register(dr)}${ctx.immediate(offset, 9)}`
+    return `${OP_CODES.LEA}${ctx.register(dr)}${ctx.immediate(offset, 9)}`
   },
 
   NOT(ctx) {
     const [dr, sr] = ctx.getOperands(2)
-    return `1001${ctx.register(dr)}${ctx.register(sr)}111111`
+    return `${OP_CODES.NOT}${ctx.register(dr)}${ctx.register(sr)}111111`
   },
 
   RET: createConstant('1100000111000000'),
@@ -97,7 +98,7 @@ export const opcodes: Record<string, OpcodeHandler> = {
 
   TRAP(ctx) {
     const [vector] = ctx.getOperands(1)
-    return `11110000${ctx.immediate(vector, 8, true)}`
+    return `${OP_CODES.TRAP}0000${ctx.immediate(vector, 8, true)}`
   },
 
   HALT: createConstant('1111000000100101'),

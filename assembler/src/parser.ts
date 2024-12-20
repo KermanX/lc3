@@ -1,4 +1,4 @@
-import { LC3Error } from './utils'
+import { LC3Error } from '../../shared/utils'
 
 export function tryParseRegister(operand: string): number | null {
   if (!/^R\d+$/i.test(operand)) {

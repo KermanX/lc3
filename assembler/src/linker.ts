@@ -1,6 +1,6 @@
+import { LC3Error, assertNonNullish } from '../../shared/utils'
 import { parseImmediate } from './parser'
 import type { Line } from './tokenizer'
-import { LC3Error, assertNonNullish } from './utils'
 
 export type SymbolTable = Record<string, number>
 

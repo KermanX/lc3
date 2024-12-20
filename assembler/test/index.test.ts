@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest'
 import { assemble } from '../src'
 import { tokenize } from '../src/tokenizer'
 
-describe('fixtures', () => {
+describe('assembler', () => {
   const fixtureDir = fileURLToPath(new URL('./fixtures', import.meta.url))
   const snapshotDir = fileURLToPath(new URL('./__snapshots__', import.meta.url))
   fs.readdirSync(fixtureDir).forEach((file) => {
