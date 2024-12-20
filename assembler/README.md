@@ -42,7 +42,7 @@ export interface Line {
 2. 对于剩下的部分，以 `','` 进行分割，除去第一部分外后面的肯定是指令的参数
 3. 对于第一部分，再以空白字符分割，并判断出哪些是标签，哪些是指令的部分
 
-具体实现参见 `src/tokenizer.ts`。
+具体实现参见 `assembler/src/tokenizer.ts`。
 
 ## Linker
 
@@ -60,13 +60,13 @@ Linker 需要分析如下伪指令：
 
 对于其他的普通指令，地址增加 1，不需要分析具体是什么指令。
 
-具体实现参见 `src/linker.ts`。
+具体实现参见 `assembler/src/linker.ts`。
 
 ## Codegen
 
 Codegen 会分析出每个指令的具体含义，并生成对应的机器码。
 
-`src/opcodes.ts` 实现了每个指令的解析和生成，`src/codegen.ts` 调用它们，综合生成机器码。
+`assembler/src/opcodes.ts` 实现了每个指令的解析和生成，`assembler/src/codegen.ts` 调用它们，综合生成机器码。
 
 对于每一条指令，Codegen 会给出一个 context，提供了一系列有用的操作：
 
@@ -122,11 +122,11 @@ function immediate(immediate, bits, unsigned) {
 
 以上是普通指令的打印。对于伪指令，可能要填充一些数据。注意 `.STRINGZ` 要在末尾填 0。
 
-具体实现参见 `src/codegen.ts`。
+具体实现参见 `assembler/src/codegen.ts`。
 
 ## Opcodes
 
-`src/opcodes.ts` 实现了每个指令的解析和生成。以 `ADD` 和 `AND` 为例，不需要重复的代码，可以使用一个函数生成：
+`assembler/src/opcodes.ts` 实现了每个指令的解析和生成。以 `ADD` 和 `AND` 为例，不需要重复的代码，可以使用一个函数生成：
 
 ```ts
 function createAddOrAnd(opcode: string): OpcodeHandler {
@@ -191,3 +191,7 @@ export const opcodes: Record<string, OpcodeHandler> = {
 ![alt text](../assets/image.png)
 
 网址：https://kermanx.github.io/lc3
+
+## 代码仓库
+
+- [GitHub](https://github.com/kermanx/lc3)
